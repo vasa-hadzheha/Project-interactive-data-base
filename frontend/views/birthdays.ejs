@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebNews</title>
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+    <script src="/scripts/FetchBirthdays.js"></script>
+    <script src="/scripts/BirthListScript.js" defer></script>
+    <style>
+    td{
+        border: 6px groove rgb(0, 255, 136);
+    }
+    th{
+        border: 10px groove rgb(7, 102, 65);
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    </style>
+</head>
+<body>
+    <h1> Birthdays </h1>
+
+    <table id="birthdays">
+
+    </table>
+
+    <form method="post" id="newBirthdayForm">
+        <label> Firstname <input type="text" name="firstname"> </label><br>
+        <label> Lastname <input type="text" name="lastname"> </label> <br>
+        <label> Birthday <input type="date" name="birthdate"> </label> <br>
+        <label> Age <input type="number" name="age"> </label> <br>
+        <button id="addBirthday" type="submit"> Add </button>
+    </form>
+</body>
+</html>

@@ -4,5 +4,7 @@ const interfaceController = require("./controller");
 const inerfaceRouter = new Router();
 
 inerfaceRouter.get("/", interfaceController.carList);
+inerfaceRouter.get("/birthdays", interfaceController.birthdayList);
+
 
 module.exports = inerfaceRouter;
