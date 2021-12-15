@@ -1,6 +1,7 @@
 const express = require("express");
 const options = require("./options");
 const carRouter = require("../cars");
+const birthRouter = require("../birthdays")
 
 const cors = require("cors");
 
@@ -16,6 +17,7 @@ backendServer.use(express.urlencoded({extended: false}));
 backendServer.use(express.json());
 
 backendServer.use("/cars", carRouter);
+backendServer.use("/birthdays", birthRouter);
 
 backendServer.all("*",(req, res)=>{
     res.status(404).send("URL not found");
