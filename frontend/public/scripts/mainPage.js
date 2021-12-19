@@ -10,7 +10,14 @@
     for (let birthday of list) {
         let birthdate = new Date(birthday.birthdate);
         let month = new Date();
-        if(birthdate.getMonth()===month.getMonth() && birthdate.getDay()===month.getDay()){
+        // console.log(birthdate.getMonth());
+        // console.log(month.getMonth())
+        // console.log(birthdate.getMonth()===month.getMonth());
+        //console.log(`${birthdate.getDate()}-bitrthdate ===${month.getDate()}-month_now`);
+        // console.log(month.getDay())
+        // console.log(birthdate.getDay()===month.getDay())
+        //console.log(`${birthday.id}----${birthdate.getMonth()}===${month.getMonth()} && ${birthdate.getDay()}===${month.getDay()}`)
+        if(birthdate.getMonth()===month.getMonth() && birthdate.getDate()===month.getDate()){
             let tr = document.createElement("tr");
           tr.innerHTML = BootTemplate(birthday);
           parent.appendChild(tr);

@@ -74,6 +74,9 @@ nav{top:47px;}
 @media only screen and (max-width: 320px) {
 h1 {padding: 20px 0px;}
 }
+.icon-phone:before {
+    content: url("/screen/github-logo.png");
+}
 /* HEADER--------------------------------------------------------------------------------- */
 
 /* MAIN -------------------------------------------------------------------------------------*/

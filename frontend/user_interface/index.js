@@ -6,7 +6,6 @@ const inerfaceRouter = new Router();
 inerfaceRouter.get("/", interfaceController.mainPage);
 inerfaceRouter.get("/cars", interfaceController.carList);
 inerfaceRouter.get("/birthdays", interfaceController.birthdayList);
-inerfaceRouter.get("/geo", interfaceController.nationalGeographic);
-
+inerfaceRouter.get("/publicHolidays", interfaceController.publicHolidaysList);
 
 module.exports = inerfaceRouter;

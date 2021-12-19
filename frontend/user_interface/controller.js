@@ -10,9 +10,8 @@ const interfaceController = {
     birthdayList:async(req, res) => {
         res.render("birthdays")
     },
-
-    nationalGeographic:async(req, res) => {
-        res.render("National Geographic Channel")
+    publicHolidaysList: async(req, res) =>{
+        res.render("publicHolidays")
     }
 }
 
