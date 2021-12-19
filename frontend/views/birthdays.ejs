@@ -1,40 +1,109 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebNews</title>
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    <meta name="description" content="Project-interactive-data-base">
+    <meta name="keywords" content="responsive menu, css responsive menu, tables, RES API, databases">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="shortcut icon" href="https://img.icons8.com/color/48/000000/bell.png">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/mainPage.css">
+    <link rel="stylesheet" media="all" href="../../assets/styles/icons.css">
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide%7CRoboto+Condensed" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
     <script src="/scripts/FetchBirthdays.js"></script>
     <script src="/scripts/BirthListScript.js" defer></script>
-    <style>
-    td{
-        border: 6px groove rgb(0, 255, 136);
-    }
-    th{
-        border: 10px groove rgb(7, 102, 65);
-    }
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-    </style>
+    <link rel="stylesheet" href="/styles/Birthday_Table.css">
+    
+
 </head>
+
 <body>
-    <h1> Birthdays </h1>
 
-    <table id="birthdays">
+    <header>
+        <section>
+            <img src="http://www.pngicons.net/uploads/2018/03/s-Of-Happy-Holidays.png" height="70" alt="Home"
+                loading="lazy" style="margin-top: -1px; bottom: 1000px;" />
+            <a href="https://www.linkedin.com/in/sutharmayur" id="logo" target="_blank">Happy-Holidays</a>
 
-    </table>
+            <label for="toggle-1" class="toggle-menu">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </label>
+            <input type="checkbox" id="toggle-1">
 
-    <form method="post" id="newBirthdayForm">
-        <label> Firstname <input type="text" name="firstname"> </label><br>
-        <label> Lastname <input type="text" name="lastname"> </label> <br>
-        <label> Birthday <input type="date" name="birthdate"> </label> <br>
-        <label> Age <input type="number" name="age"> </label> <br>
-        <button id="addBirthday" type="submit"> Add </button>
+            <nav>
+                <ul>
+                    <li><a href="#logo"><i class="icon-home"></i>Home</a></li>
+                    <li><a href="#about"><i class="icon-user"></i>About</a></li>
+                    <li><a href="#portfolio"><i class="icon-thumbs-up-alt"></i>Portfolio</a></li>
+                    <li><a href="#services"><i class="icon-gear"></i>Services</a></li>
+                    <li><a href="#gallery"><i class="icon-picture"></i>Gallery</a></li>
+                    <li><a href="#contact"><i class="icon-phone"></i>Contact</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <main>
+        <h1> Birthdays </h1>
+    <div class="table-wrapper">
+        <table id="birthdays" class="fl-table">
+
+        </table>
+    </div>
+
+    <form method="post" id="newBirthdayForm" class="input">
+        <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="">First and last name</span>
+            </div>
+            <input type="text" class="form-control"placeholder="First name" name="firstname">
+            <input type="text" class="form-control"placeholder="Last name" name="lastname">
+          </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Birth date</span>
+            </div>
+            <input type="date" class="form-control" placeholder="input birth date" name="birthdate" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" id="addBirthday" type="button">Add person</button>
+              </div>
+          </div>
     </form>
+    </main>
+
+    <footer>
+        <ul class="social">
+        <li><a href="https://twitter.com/mayursuthar2693" target="_blank"><i class="icon-twitter"></i></a></li>
+        <li><a href="https://www.facebook.com/mayursuthar2693" target="_blank"><i class="icon-facebook"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/sutharmayur" target="_blank"><i class="icon-linkedin"></i></a></li>
+        <li><a href="https://www.pinterest.com/MayurSuthar2693/" target="_blank"><i class="icon-pinterest"></i></a></li>
+        <li><a href="https://plus.google.com/109916819421919014146/posts" target="_blank"><i class="icon-google-plus"></i></a></li>
+        <li><a href="https://www.instagram.com/mayursuthar2693/" target="_blank"><i class="icon-instagram"></i></a></li>
+        </ul>
+        </footer>
+
 </body>
+
 </html>

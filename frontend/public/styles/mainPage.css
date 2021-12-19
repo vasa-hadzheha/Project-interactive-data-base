@@ -26,11 +26,11 @@ input[type=checkbox], label{display:none;}
 .content h2{font-size:18px; font-weight:500; color:#002e5b; border-bottom:1px solid #fde428; display:table; padding-bottom:10px; margin-bottom:10px;}
 .content p{font-size:14px; line-height:22px; color:#7c7c7c; text-align:justify;}
 
-footer{display:table; padding-bottom:30px; width:100%;}
+footer{display:flex; width:100%; height: auto; justify-content: center; align-items: center;}
 .social{margin:0px auto; display:table; display:table;}
-.social li{float:left; padding:0px 10px;}
+.social li{float:left; padding:20px;}
 .social li a{color:#002e5b; transition: all 0.5s ease 0s;}
-.social li a:hover{color:#fde428; transition: all 0.5s ease 0s;}
+.social li a:hover{color:#28cbfd; transition: all 0.5s ease 0s;}
 
 @media only screen and (max-width: 1440px) {
 section{max-width:95%;}
@@ -78,11 +78,12 @@ h1 {padding: 20px 0px;}
 
 /* MAIN -------------------------------------------------------------------------------------*/
 main{
-    border: 10px groove rgb(238, 255, 0);
+    /* border: 10px groove rgb(238, 255, 0); */
     display: flex;
-    height: 100%;
+    height: auto;
 	padding-right: 25px;
 	padding-left: 25px;
+	flex-direction: column;
 }
 .flex_row_1{
     border: 5px solid blue;
@@ -95,7 +96,7 @@ main{
 .flex_item_1{
     border: 5px solid tomato;
    background-color: aqua;
-   margin-bottom: 10px;
+   margin-bottom: 70px;
 }
 div.flex_item_1 h3{
 	font-size: 50px;
@@ -106,137 +107,21 @@ div.flex_item_1 h3{
     background-color: rgb(5, 124, 35);
     color: white;
     font-size: 20px;
+	margin-top: 70px;
 }
 /* MAIN -------------------------------------------------------------------------------------*/
 
 /* FOOTER -------------------------------------------------------------------------------------*/
-.wrapper {
+footer{
+	width:100%; 
+	display:flex; 
+	background-color:#fde428; 
+	margin-top:50px;
+    height: auto;
+	align-items: center;
+	justify-content: center;
+}
 
-	width: 550px;
-  }
-  
-  /* Style the Un-order list by setting its list-style to none */
-  .wrapper ul {
-	list-style: none;
-  }
-  
-  /* Style the list items inside the UL list, by setting its width, height and line-height 
-	and float them to left and set its border and border-radius.
-   */
-  .wrapper ul li {
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	margin: 0 10px;
-	text-align: center;
-	cursor: pointer;
-	border-radius: 50%;
-	border: 5px solid #D8E2DC;
-	float: left;
-	transition: all 0.5s ease;
-  }
-  
-  /* Style the icons by setting its color and margin-top value to 20px 
-  to align it properly */
-  .wrapper ul li .fa {
-	color: #D8E2DC;
-	margin-top: 5px;
-	transition: all 0.5s ease;
-  }
-  
-  /* Now target the specific li classes for styling and use box-shadow effect to border and text-shadow effect
-	to icons for glowing effect and use transition property for smooth transition effect. */
-  /*facebook*/
-  .wrapper ul li:hover.facebook {
-	border: 5px solid #3b5998;
-	box-shadow: 0 0 15px #3b5998;
-	transition: all 0.5s ease;
-  }
-  
-  .wrapper ul li:hover .fa-facebook {
-	color: #3b5998;
-	text-shadow: 0 0 15px #3b5998;
-	transition: all 0.5s ease;
-  }
-  
-  /*twitter*/
-  .wrapper ul li:hover.twitter {
-	border: 5px solid #00aced;
-	box-shadow: 0 0 15px #00aced;
-	transition: all 0.5s ease;
-  }
-  
-  .wrapper ul li:hover .fa-twitter {
-	color: #00aced;
-	text-shadow: 0 0 15px #00aced;
-	transition: all 0.5s ease;
-  }
-  
-  /* instagram */
-  .wrapper ul li:hover.instagram {
-	border: 5px solid #bc2a8d;
-	box-shadow: 0 0 15px #bc2a8d;
-	transition: all 0.5s ease;
-  }
-  
-  .wrapper ul li:hover .fa-instagram {
-	color: #bc2a8d;
-	text-shadow: 0 0 15px #bc2a8d;
-	transition: all 0.5s ease;
-  }
-  
-  /* google */
-  .wrapper ul li:hover.google {
-	border: 5px solid #dd4b39;
-	box-shadow: 0 0 15px #dd4b39;
-	transition: all 0.5s ease;
-  }
-  
-  .wrapper ul li:hover .fa-google {
-	color: #dd4b39;
-	text-shadow: 0 0 15px #dd4b39;
-	transition: all 0.5s ease;
-  }
-  
-  /* whatsapp */
-  .wrapper ul li:hover.whatsapp {
-	border: 5px solid #4dc247;
-	box-shadow: 0 0 15px #4dc247;
-	transition: all 0.5s ease;
-  }
-  
-  .wrapper ul li:hover .fa-whatsapp {
-	color: #4dc247;
-	text-shadow: 0 0 15px #4dc247;
-	transition: all 0.5s ease;
-  }
-  
-  
-  /* media queries */
-  
-  @media screen and (max-width: 640px){
-	.wrapper {
-		width: 350px;
-	}
-	.wrapper ul li{
-		margin-top: 10px;
-	}
-	.wrapper ul li.google{
-		margin-left: 60px;
-	}
-  }
-  
-  
-  @media screen and (max-width: 340px){
-	.wrapper {
-		width: 150px;
-	}
-	.wrapper ul li{
-		margin:15px;
-	}
-	.wrapper ul li.google{
-		margin-left: 15px;
-	}
-  }
+
 /* FOOTER -------------------------------------------------------------------------------------*/
 
