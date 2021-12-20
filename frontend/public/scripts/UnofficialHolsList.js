@@ -1,16 +1,16 @@
-function BootTemplate(publicHoliday) {
-    let k = new Date(publicHoliday.date);
-    console.log(publicHoliday.date)
+function BootTemplate(unofficialHoliday) {
+    let k = new Date(unofficialHoliday.date);
+    console.log(unofficialHoliday.date)
     let date = `${k.getDate()}-${("0" + (k.getMonth() + 1)).slice(-2)}-${k.getFullYear()}`;
-    return `    <td> ${publicHoliday.id} </td>
-                <td> ${publicHoliday.holiday} </td>
+    return `    <td> ${unofficialHoliday.id} </td>
+                <td> ${unofficialHoliday.holiday} </td>
                 <td> ${date}</td>`;
   }
   
   function RenderBirthdayList(list, parent) {
     parent.innerHTML = "";
   
-    const headerArr = ["ID","Public Holiday","Date"];
+    const headerArr = ["ID","Unofficial Holiday","Date"];
     let thead = document.createElement("thead");
     let tr = document.createElement("tr");
     for (let i = 0; i < headerArr.length; i++) {
@@ -20,10 +20,10 @@ function BootTemplate(publicHoliday) {
         thead.appendChild(tr);      
     }
       parent.appendChild(thead);
-    for (let publicHoliday of list) {
+    for (let unofficialHoliday of list) {
       //let tbody = document.createElement("tbody");
       let tr = document.createElement("tr");
-      tr.innerHTML = BootTemplate(publicHoliday);
+      tr.innerHTML = BootTemplate(unofficialHoliday);
       //tbody.appendChild(tr);
       parent.appendChild(tr);
     }
@@ -31,8 +31,8 @@ function BootTemplate(publicHoliday) {
   
   async function Render() {
     try {
-      let publicHolidays = await Load();
-      RenderBirthdayList(publicHolidays, document.getElementById("PublicHolidays"));
+      let unofficialHolidays = await Load();
+      RenderBirthdayList(unofficialHolidays, document.getElementById("UnofficialHolidays"));
     } catch (e) {
       alert(e);
     }
@@ -41,5 +41,5 @@ function BootTemplate(publicHoliday) {
   
   /*-----*/
   Render();
-  // alert("Render PublicHolidays list")
-  console.log("Render PublicHolidays list")
+//   alert("Render unofficialHolidays list")
+  console.log("Render unofficialHolidays list")

@@ -28,9 +28,9 @@
   }
 
   function publicBoot(publicHoliday) {
-    return `<div style="background-color: rgb(212, 8, 8); width: 20px;height: 20px;float: left;margin-right: 15px;">
+    return `<div style="background-color: rgb(212, 8, 8); width: 20px;height: 20px;float: left;margin-right: 15px; margin-bottom: 5px">
     </div>
-    Свято - ${publicHoliday.holiday}<br>`
+    ${publicHoliday.holiday}<br>`
   }
 
   function RenderPublicHolidayList(list, parent) {
@@ -54,6 +54,32 @@
     }
   }
 
+  function unofficialBoot(unofficialHoliday) {
+    return `<div style="background-color: #7E66FF; width: 20px;height: 20px;float: left;margin-right: 15px; margin-bottom: 5px"></div>
+    ${unofficialHoliday.holiday}<br>`
+  }
+
+  function RenderUnofficialHolidayList(list, parent) {
+    parent.innerHTML = "";
+    for (let unofficialHoliday of list) {
+        let unofficialHolidaydate = new Date(unofficialHoliday.date);
+        let month = new Date();
+        // console.log(publicHolidaydate.getMonth());
+        // console.log(month.getMonth())
+        // console.log(publicHolidaydate.getMonth()===month.getMonth());
+        //console.log(`${publicHolidaydate.getDate()}-publicHolidaydate ===${month.getDate()}-month_now`);
+        // console.log(month.getDay())
+        // console.log(publicHolidaydate.getDay()===month.getDay())
+        //console.log(`${publicHolidaydate.id}----${publicHolidaydate.getMonth()}===${month.getMonth()} && ${publicHolidaydate.getDay()}===${month.getDay()}`)
+        if(unofficialHolidaydate.getMonth()===month.getMonth() && unofficialHolidaydate.getDate()===month.getDate()){
+            let tr = document.createElement("tr");
+          tr.innerHTML = unofficialBoot(unofficialHoliday);
+          parent.appendChild(tr);
+        }
+
+    }
+  }
+
   function RenderDateToday(parent) {
     parent.innerHTML = "";
     const date = new Date();
@@ -64,13 +90,15 @@
     try {
       let birthdays = await LoadBirth();
       let publicHoliday = await LoadPublicHoliday();
+      let unofficialHoliday = await LoadUnofficialHoliday();
       RenderBirthdayList(birthdays, document.getElementById("today_birthdays"));
       RenderPublicHolidayList(publicHoliday, document.getElementById("today_publicHolidays"))
+      RenderUnofficialHolidayList(unofficialHoliday, document.getElementById("today_unofficialHolidays"))
       RenderDateToday(document.getElementById("date"));
     } catch (e) {
       alert(e);
     }
   }
   Render();
-  alert("Render birthday list")
+  // alert("Render birthday list")
   console.log("Render birthday list")

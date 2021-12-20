@@ -12,13 +12,6 @@
 	margin: 0 auto;
 }
 
-.body-inner-wrapper > *:nth-child(1) {
-
-}
-
-.body-inner-wrapper > *:nth-child(2) {
-
-}
 
 .inner-image {
 
@@ -34,6 +27,8 @@ p, h3, img {
 	padding-right: 20px;
 	padding-left: 20px;
 }
-img{
+main img{
 	max-width: 1290px;
+	width: 100%;
+	height: auto;
 }

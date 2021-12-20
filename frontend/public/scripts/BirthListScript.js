@@ -45,7 +45,8 @@ async function RemoveBirthday(id) {
   try {
     let removedBirthday = await Remove(id);
     await Render();
-    alert(`Вилучено ${JSON.stringify(removedBirthday)}`);
+    // alert(`Вилучено ${JSON.stringify(removedBirthday)}`);
+    console.log(`Вилучено ${JSON.stringify(removedBirthday)}`)
   } catch (e) {
     alert(e);
   }
@@ -56,7 +57,8 @@ async function ChangeBirthday(id) {
     let data = Object.fromEntries(new FormData(document.forms["newBirthdayForm"]));
     let changedBirthday = await Change(id, data);
     await Render();
-    alert(`Змінено ${JSON.stringify(changedBirthday)}`);
+    // alert(`Змінено ${JSON.stringify(changedBirthday)}`);
+    console.log(`Змінено ${JSON.stringify(changedBirthday)}`)
   } catch (e) {
     alert(e);
   }
@@ -68,7 +70,8 @@ async function NewBirthday(event) {
     let data = Object.fromEntries(new FormData(document.forms["newBirthdayForm"]));
     let newBirthday = await Add(data);
     await Render();
-    alert(`Додано ${JSON.stringify(newBirthday)}`);
+    // alert(`Додано ${JSON.stringify(newBirthday)}`);
+    console.log(`Додано ${JSON.stringify(newBirthday)}`);
   } catch (e) {
     alert(e);
   }
@@ -77,5 +80,5 @@ async function NewBirthday(event) {
 /*-----*/
 document.getElementById("addBirthday").onclick = NewBirthday;
 Render();
-alert("Render birthday list")
+// alert("Render birthday list")
 console.log("Render birthday list")

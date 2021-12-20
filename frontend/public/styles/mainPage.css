@@ -89,7 +89,7 @@ main{
 	flex-direction: column;
 }
 .flex_row_1{
-    border: 5px solid blue;
+    /* border: 5px solid blue; */
 	width: 100%;
     /* align-items: baseline;
     flex-direction: row; */
@@ -97,20 +97,20 @@ main{
 
 
 .flex_item_1{
-    border: 5px solid tomato;
-   background-color: aqua;
-   margin-bottom: 70px;
+    /* border: 5px solid tomato;
+   background-color: aqua; */
+   margin-bottom: 35px;
 }
 div.flex_item_1 h3{
 	font-size: 50px;
 }
 
 .flex_item_2{
-    border: 5px solid rgb(255, 71, 230);
-    background-color: rgb(5, 124, 35);
-    color: white;
+    /* border: 5px solid rgb(255, 71, 230);
+    background-color: rgb(5, 124, 35); */
+    color: rgb(0, 0, 0);
     font-size: 20px;
-	margin-top: 70px;
+	margin-top: 35px;
 }
 /* MAIN -------------------------------------------------------------------------------------*/
 
@@ -119,7 +119,7 @@ footer{
 	width:100%; 
 	display:flex; 
 	background-color:#fde428; 
-	margin-top:50px;
+	margin-top:42px;
     height: auto;
 	align-items: center;
 	justify-content: center;

@@ -12,6 +12,9 @@ const interfaceController = {
     },
     publicHolidaysList: async(req, res) =>{
         res.render("publicHolidays")
+    },
+    unofficialHolidays: async(req, res) =>{
+        res.render("unofficialHolidays")
     }
 }
 
