@@ -3,6 +3,7 @@ const options = require("./options");
 const carRouter = require("../cars");
 const birthRouter = require("../birthdays");
 const publicHolidayRouter = require("../publicHolidays");
+const unofficialHolidayRouter = require("../unofficialHolidays");
 
 const cors = require("cors");
 
@@ -20,6 +21,7 @@ backendServer.use(express.json());
 backendServer.use("/cars", carRouter);
 backendServer.use("/birthdays", birthRouter);
 backendServer.use("/publicHolidays", publicHolidayRouter);
+backendServer.use("/unofficialHolidays", unofficialHolidayRouter);
 
 backendServer.all("*",(req, res)=>{
     res.status(404).send("URL not found");
