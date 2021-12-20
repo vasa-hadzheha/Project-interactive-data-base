@@ -3,3 +3,8 @@ async function LoadBirth() {
     if (!res.ok) throw new Error(res.statusText);
     return await res.json();
   }
+  async function LoadPublicHoliday() {
+    let res = await fetch("http://localhost:3000/publicHolidays");
+    if (!res.ok) throw new Error(res.statusText);
+    return await res.json();
+  }

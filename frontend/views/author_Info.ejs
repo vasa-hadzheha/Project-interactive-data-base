@@ -2,46 +2,94 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/for_author_info.css">
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    <meta name="description" content="Project-interactive-data-base">
+    <meta name="keywords" content="responsive menu, css responsive menu, tables, RES API, databases">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="shortcut icon" href="https://img.icons8.com/color/48/000000/bell.png">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
     <title>Author</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/mainPage.css">
+    <link rel="stylesheet" href="/styles/for_author_info.css">
+    <link rel="stylesheet" media="all" href="../../assets/styles/icons.css">
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
 </head>
 
 <body>
+
+    <header>
+        <section>
+            <img src="http://www.pngicons.net/uploads/2018/03/s-Of-Happy-Holidays.png" height="70" alt="Home"
+                loading="lazy" style="margin-top: -1px; bottom: 1000px;" />
+            <a href="https://www.linkedin.com/in/sutharmayur" id="logo" target="_blank">Happy-Holidays</a>
+
+            <label for="toggle-1" class="toggle-menu">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </label>
+            <input type="checkbox" id="toggle-1">
+
+            <nav>
+                <ul>
+                    <li><a href="/"><i class="icon-home"></i>Home</a></li>
+                    <li><a href="/for-developers/author-information/"><i class="icon-user"></i>About</a></li>
+                    <li><a href="https://github.com/vasa-hadzheha/Labs.git"><i class="icon-thumbs-up-alt"></i>Portfolio</a></li>
+                    <li><a href="/for-developers/technical-information/"><i class="icon-gear"></i>API</a></li>
+                    <li><a href="https://github.com/vasa-hadzheha/Project-interactive-data-base.git"><i class="icon-phone"></i>Project on Github</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
     <h1> Про автора проекту </h1>
     <br>
     <main>
-        <section class="flex_row_1">
-            <div class="flex_item_1">
-                <div class="content">Прикладна математика 2 курс</div>
+        <div class="grid">
+            <div class="grid_cell">УжНУ Прикладна математика 2 курс</div>
+            <div class="grid_cell">
+                Проект інтерактивна база даних
             </div>
-            <div class="flex_item_2">
-                <div class="content">УжНУ</div>
-            </div>
-        </section>
-        <section class="flex_row_2">
-            <div class="flex_item_3">
-                <div class="content">
-                    <div class="content"><img
-                            src="https://www.uzhnu.edu.ua/uploads/news/20140402_1044_emblema_uzhnu.jpg" width="200"
-                            height="200"></div>
+            <div class="grid_cell"><img src="https://www.uzhnu.edu.ua/uploads/news/20140402_1044_emblema_uzhnu.jpg" width="350"
+                height="300""></div>
+                <div class="grid_cell">
+                    <p>
+                        Міні проект з метою вивчення API, node.js та роботою з базами даних. З використанням ejs, express,
+                        sequelize, sqlite3.
+                      </p>
                 </div>
-            </div>
-            <div class="flex_item_4">
-                <p>
-                    Міні проект з метою вивчення API, node.js та роботою з базами даних. З використанням ejs, express,
-                    sequelize, sqlite3.
-                </p>
-            </div>
-        </section>
-        <section class="flex_row_3">
-            <div class="flex_item_5">
-                <div class="content" style="text-align:right">Гаджеги Василя Андрійовича</div>
-            </div>
-        </section>
+            <div class="grid_cell">Гаджеги Василя</div>
+        </div>
     </main>
+
+    <footer>
+        <ul class="social">
+        <li><a href="#" target="_blank"><i class="icon-twitter"></i></a></li>
+        <li><a href="#" target="_blank"><i class="icon-facebook"></i></a></li>
+        <li><a href="#" target="_blank"><i class="icon-linkedin"></i></a></li>
+        <li><a href="#" target="_blank"><i class="icon-pinterest"></i></a></li>
+        <li><a href="#" target="_blank"><i class="icon-google-plus"></i></a></li>
+        <li><a href="#" target="_blank"><i class="icon-instagram"></i></a></li>
+        </ul>
+        </footer>
+
 </body>
 
 </html>
