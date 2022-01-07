@@ -16,7 +16,7 @@ frontendServer.use("/", interfaceRouter);
 
 frontendServer.all("*",(req, res)=>{
     res.render("NotFound404", {
-        url: "./images/anime_go_404.png",
+        url: "./images/404.png",
         text: "Page not found"
     });
 });

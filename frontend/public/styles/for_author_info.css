@@ -1,5 +1,5 @@
 .grid{
-    border: 5px solid rgb(0, 0, 0);
+    /* border: 5px solid rgb(0, 0, 0); */
     display: grid;
     height: auto;
     grid-template-columns: auto auto auto;
@@ -11,8 +11,8 @@
     ;
 }
 .grid_cell{
-    background-color: rgb(236, 236, 236);
-    border: 5px solid rgb(16, 239, 255);
+    background-color: rgba(236, 236, 236, 0.226);
+    border: 5px solid #4FC3A1;
     text-align: center;
   padding: 20px;
   font-size: 30px;
